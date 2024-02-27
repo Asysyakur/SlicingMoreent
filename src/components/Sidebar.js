@@ -20,10 +20,11 @@ export default function Sidebar() {
         width: 328,
         padding: 2,
         zIndex: 1200,
+        backgroundColor:"#ffffff"
       }}
       role="presentation"
     >
-      <FormControl component="fieldset" sx={{ paddingBottom: 4 }}>
+      <FormControl component="fieldset" sx={{ paddingBottom: 4,  }}>
         <FormLabel
           sx={{ fontWeight: 600, fontSize: 12 }}
           color="secondary"

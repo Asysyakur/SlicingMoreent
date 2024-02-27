@@ -1,135 +1,29 @@
 import React from 'react'
-import image from "../assets/car.png";
 import Card from "../components/Card";
 import NavBar from "../components/NavBar";
 import Grid from "@mui/material/Grid";
-import { Button } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import Sidebar from "../components/Sidebar";
-import Pickbox from "../components/Pickbox";
+import cars from "../datamobil.json";
 
-const cars = [
-    {
-      image: image,
-      name: "Koenigsegg",
-      category: "Sport",
-      gas: "90",
-      manual: "manual",
-      size: 2,
-      price: 99,
-    },
-    {
-      image: image,
-      name: "Koenigsegg",
-      category: "Sport",
-      gas: "90",
-      manual: "manual",
-      size: 2,
-      price: 99,
-    },
-    {
-      image: image,
-      name: "Koenigsegg",
-      category: "Sport",
-      gas: "90",
-      manual: "manual",
-      size: 2,
-      price: 99,
-    },
-    {
-      image: image,
-      name: "Koenigsegg",
-      category: "Sport",
-      gas: "90",
-      manual: "manual",
-      size: 2,
-      price: 99,
-    },
-    {
-      image: image,
-      name: "Koenigsegg",
-      category: "Sport",
-      gas: "90",
-      manual: "manual",
-      size: 2,
-      price: 99,
-    },
-    {
-      image: image,
-      name: "Koenigsegg",
-      category: "Sport",
-      gas: "90",
-      manual: "manual",
-      size: 2,
-      price: 99,
-    },
-    {
-      image: image,
-      name: "Koenigsegg",
-      category: "Sport",
-      gas: "90",
-      manual: "manual",
-      size: 2,
-      price: 99,
-    },
-    {
-      image: image,
-      name: "Koenigsegg",
-      category: "Sport",
-      gas: "90",
-      manual: "manual",
-      size: 2,
-      price: 99,
-    },
-    {
-      image: image,
-      name: "Koenigsegg",
-      category: "Sport",
-      gas: "90",
-      manual: "manual",
-      size: 2,
-      price: 99,
-    },
-    {
-      image: image,
-      name: "Koenigsegg",
-      category: "Sport",
-      gas: "90",
-      manual: "manual",
-      size: 2,
-      price: 99,
-    },
-    {
-      image: image,
-      name: "Koenigsegg",
-      category: "Sport",
-      gas: "90",
-      manual: "manual",
-      size: 2,
-      price: 99,
-    },
-    {
-      image: image,
-      name: "Koenigsegg",
-      category: "Sport",
-      gas: "90",
-      manual: "manual",
-      size: 2,
-      price: 99,
-    },
-  ];
-  
 export default function Detail() {
   return (
-    <div>
-    <Button variant="contained" color="primary">
-                Primary Button
-            </Button>
-            <Button variant="contained" color="secondary">
-                Secondary Button
-            </Button>
+    <div style={{backgroundColor:"#F6F7F9"}}>
       <NavBar />
-      <Pickbox/>
       <Sidebar />
+      <Grid
+        container
+        sx={{ paddingX: 3 }}
+        justifyContent="space-between"
+        spacing={1}
+      >
+        <Grid item>
+          <Typography>Recent Car</Typography>
+        </Grid>
+        <Grid item>
+          <Typography>View All</Typography>
+        </Grid>
+      </Grid>
       <Grid justifyContent="center" container spacing={2} sx={{ marginTop: 2 }}>
           {cars.map((car) => (
         <Grid item>

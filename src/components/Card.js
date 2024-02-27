@@ -13,11 +13,11 @@ import Grid from "@mui/material/Grid";
 
 const Cards = ({ image, name, category, gas, manual, size, price }) => {
   return (
-    <Box sx={{ minWidth: 304, minHeight: 388 }}>
-      <Card variant="outlined">
+    <Box sx={{ minWidth: 304, minHeight: 388}}>
+      <Card variant="outlined" sx={{ backgroundColor:"#ffffff" }}>
         <CardContent>
           <div
-            style={{ display: "flex", alignItems: "center", marginBottom: 48 }}
+            style={{ display: "flex", alignItems: "center", marginBottom: 48  }}
           >
             <div>
               <Typography
