@@ -1,6 +1,6 @@
 [
   {
-    "image": "/assets/car.png",
+    "image": "assets/car.png",
     "name": "Koenigsegg",
     "category": "Sport",
     "gas": "90",

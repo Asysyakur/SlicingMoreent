@@ -13,6 +13,7 @@ const theme = createTheme({
             primary: '#1A202C', // Contoh warna primary
             secondary: '#90A3BF', // Ubah atau tambahkan warna text.secondary sesuai keinginan Anda
             third: '#596780', // Ubah atau tambahkan warna text.third sesuai keinginan Anda
+            white: '#ffffff', // Ubah atau tambahkan warna text.third sesuai keinginan Anda
         },
     },
     typography: {
