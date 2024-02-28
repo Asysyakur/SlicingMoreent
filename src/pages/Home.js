@@ -17,14 +17,14 @@ export default function Home() {
         container
         justifyContent="center"
         alignItems={"center"}
-        spacing={2}
+        spacing={5}
         sx={{ marginY: 3 }}
       >
         <Grid item>
           <Pickbox name="Pick - Up" />
         </Grid>
         <Grid item>
-          <ButtonUsage Icon={SwapVertIcon} />
+          <ButtonUsage sx={{width:'60px', height:'60px', borderRadius:'10px'}} Icon={SwapVertIcon} />
         </Grid>
         <Grid item>
           <Pickbox name="Drop - Off" />
@@ -33,18 +33,19 @@ export default function Home() {
 
       <Grid
         container
-        sx={{ paddingX: 3 }}
+        sx={{ paddingX: 8, marginTop:8 }}
         justifyContent="space-between"
-        spacing={1}
       >
         <Grid item>
-          <Typography>Popular Car</Typography>
+          <Typography sx={{ fontSize: 16, fontWeight: 600 }}
+                color="text.secondary">Popular Car</Typography>
         </Grid>
         <Grid item>
-          <Typography>View All</Typography>
+          <Typography sx={{ fontSize: 16, fontWeight: 600 }}
+                color="primary">View All</Typography>
         </Grid>
       </Grid>
-      <Grid justifyContent="center" container spacing={1} sx={{ marginY: 3 }}>
+      <Grid justifyContent="center" container spacing={2} sx={{ marginY: 3 }}>
         {cars.slice(0, 8).map((car) => (
           <Grid item>
             <Card
@@ -59,8 +60,9 @@ export default function Home() {
           </Grid>
         ))}
       </Grid>
-      <Typography sx={{ paddingX: 3 }} >Recomendation Car</Typography>
-      <Grid justifyContent="center" container spacing={1} sx={{ marginY: 2 }}>
+      <Typography sx={{ paddingX:8, marginTop:8 ,fontSize: 16, fontWeight: 600 }}
+                color="text.secondary" >Recomendation Car</Typography>
+      <Grid justifyContent="center" container spacing={2} sx={{ marginY: 2 }}>
         {cars.slice(0, 4).map((car) => (
           <Grid item>
             <Card
@@ -75,7 +77,7 @@ export default function Home() {
           </Grid>
         ))}
       </Grid>
-      <Box justifyContent="center" sx={{margin: 3, display:"flex"}}>
+      <Box justifyContent="center" sx={{paddingBottom: 8, paddingTop:4, display:"flex"}}>
         <Link to="/Detail" >
         <ButtonUsage name="Show more car" />
         </Link>

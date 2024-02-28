@@ -13,8 +13,8 @@ import Grid from "@mui/material/Grid";
 
 const Cards = ({ image, name, category, gas, manual, size, price }) => {
   return (
-    <Box sx={{ minWidth: 304, minHeight: 388}}>
-      <Card variant="outlined" sx={{ backgroundColor:"#ffffff" }}>
+    <Box sx={{ minWidth: '304px', minHeight: '388px'}}>
+      <Card sx={{ backgroundColor:"#ffffff", borderRadius:'10px' }}>
         <CardContent>
           <div
             style={{ display: "flex", alignItems: "center", marginBottom: 48  }}
@@ -44,16 +44,16 @@ const Cards = ({ image, name, category, gas, manual, size, price }) => {
             alt="car"
             style={{ width: "100%", height: "auto", marginBottom: 48 }}
           />
-          <Grid textAlign="center" spacing={2} color="text.secondary" container>
-            {["gas", "manual", "size"].map((text, index) => (
-              <Grid key={text} container alignItems="center" item xs={4}>
-                <Grid>
+          <Grid spacing={2}  color="text.secondary" container>
+            {["gas", "manual", "size"].map((text) => (
+              <Grid container item xs={4}>
+                <Grid item>
                   {text === "gas" ? <LocalGasStationIcon /> : null}
                   {text === "manual" ? <SpeedIcon /> : null}
                   {text === "size" ? <PeopleAltIcon /> : null}
                 </Grid>
 
-                <Grid>
+                <Grid item>
                   <Typography
                     sx={{ fontSize: 14, fontWeight: 500 }}
                     component="div"
