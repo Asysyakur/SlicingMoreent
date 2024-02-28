@@ -2,7 +2,7 @@ import React from "react";
 import Card from "../components/Card";
 import NavBar from "../components/NavBar";
 import Grid from "@mui/material/Grid";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import SwapVertIcon from "@mui/icons-material/SwapVert";
 import Pickbox from "../components/Pickbox";
 import cars from "../datamobil.json";
@@ -21,13 +21,13 @@ export default function Home() {
         sx={{ marginY: 3 }}
       >
         <Grid item>
-          <Pickbox name="Pick - Up" />
+          <Pickbox sx={{padding:4}} name="Pick - Up" />
         </Grid>
         <Grid item>
           <ButtonUsage sx={{width:'60px', height:'60px', borderRadius:'10px'}} Icon={SwapVertIcon} />
         </Grid>
         <Grid item>
-          <Pickbox name="Drop - Off" />
+          <Pickbox sx={{padding:4}} name="Drop - Off" />
         </Grid>
       </Grid>
 

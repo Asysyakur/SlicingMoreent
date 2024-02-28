@@ -9,21 +9,28 @@ import {
   Typography,
   Grid,
   Slider,
+  Drawer,
 } from "@mui/material";
 import React, { useState } from "react";
 
 export default function Sidebar() {
   const [sliderValue, setSliderValue] = useState();
   return (
+    <Drawer
+        anchor="left"
+        variant="permanent"
+      >
     <Box
       sx={{
-        width: 328,
+        width: 300,
         padding: 2,
-        zIndex: 1200,
-        backgroundColor:"#ffffff"
+        zIndex: 2000,
+        backgroundColor:"#ffffff",
+        marginTop:8
       }}
       role="presentation"
     >
+      
       <FormControl component="fieldset" sx={{ paddingBottom: 4,  }}>
         <FormLabel
           sx={{ fontWeight: 600, fontSize: 12 }}
@@ -128,5 +135,6 @@ export default function Sidebar() {
         </Typography>
       </Box>
     </Box>
+      </Drawer>
   );
 }

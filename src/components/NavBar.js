@@ -3,7 +3,7 @@ import React from "react";
 
 export default function NavBar() {
     return (
-        <AppBar position="static" color="common">
+        <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }} color="common">
         <Toolbar>
             <Typography variant="h6" color="primary">
             MORENT

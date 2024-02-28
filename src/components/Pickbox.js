@@ -3,9 +3,9 @@ import Grid from "@mui/material/Grid";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import CircleIcon from "@mui/icons-material/Circle";
-import { Typography, Box, FormControl, InputLabel } from "@mui/material";
+import { Typography, Box, FormControl } from "@mui/material";
 
-export default function Pickbox({ name }) {
+export default function Pickbox({sx, name }) {
   const [selectedOption, setSelectedOption] = useState("default");
 
   const handleChange = (event) => {
@@ -15,8 +15,7 @@ export default function Pickbox({ name }) {
   return (
     <Box
       sx={{
-        paddingY: 4,
-        paddingX: 4,
+        ...sx,
         backgroundColor: "#ffffff",
         borderRadius: "10px",
       }}
@@ -50,7 +49,7 @@ export default function Pickbox({ name }) {
         container
         justifyContent="center"
         alignItems={"center"}
-        columnSpacing={4}
+        columnSpacing={2}
         sx={{ marginY: 1 }}
       >
         <Grid item>
