@@ -8,11 +8,26 @@ import Pickbox from "../components/Pickbox";
 import cars from "../datamobil.json";
 import ButtonUsage from "../components/ButtonUsage";
 import { Link } from "react-router-dom";
+import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
+import { Card_Hero } from "../components/Card_Hero";
 
 export default function Home() {
   return (
     <div style={{ backgroundColor: "#F6F7F9" }}>
-      <NavBar />
+      <Header />
+      <Grid container
+        justifyContent="center"
+        alignItems={"center"}
+        spacing={5}
+        sx={{ marginY: 5 }}>
+        <Grid item>
+          <Card_Hero/>
+        </Grid>
+        <Grid item>
+          <Card_Hero/>
+        </Grid>
+      </Grid>
       <Grid
         container
         justifyContent="center"
@@ -82,6 +97,7 @@ export default function Home() {
         <ButtonUsage name="Show more car" />
         </Link>
       </Box>
+      <Footer/>
     </div>
   );
 }

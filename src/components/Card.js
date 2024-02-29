@@ -10,6 +10,7 @@ import LocalGasStationIcon from "@mui/icons-material/LocalGasStation";
 import Typography from "@mui/material/Typography";
 import ButtonUsage from "./ButtonUsage";
 import Grid from "@mui/material/Grid";
+import { Link } from "@mui/material";
 
 const Cards = ({ image, name, category, gas, manual, size, price }) => {
   return (
@@ -89,7 +90,9 @@ const Cards = ({ image, name, category, gas, manual, size, price }) => {
             </Grid>
             <Grid item>
               <CardActions>
-                <ButtonUsage name="Rent Now" />
+                <Link to="Payment">
+                  <ButtonUsage name="Rent Now" />
+                </Link>
               </CardActions>
             </Grid>
           </Grid>

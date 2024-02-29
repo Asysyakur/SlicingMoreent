@@ -10,11 +10,14 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ExpandMoreRoundedIcon from "@mui/icons-material/ExpandMoreRounded";
 import BG from "../assets/BG.png";
 import ButtonUsage from "../components/ButtonUsage";
+import { Link } from "react-router-dom";
+import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
 
 export default function Detail() {
   return (
     <div style={{ backgroundColor: "#F6F7F9" }}>
-      <NavBar />
+      <Header />
       <Sidebar />
       <Box sx={{ marginLeft: "328px" }}>
         <Box sx={{ marginX: 3 }}>
@@ -234,7 +237,10 @@ export default function Detail() {
                     </Typography>
                   </Grid>
                   <Grid item>
-                    <ButtonUsage name="Rent Now" />
+                    <Link to="/Payment">
+                     <ButtonUsage name="Rent Now" />
+
+                    </Link>
                   </Grid>
                 </Grid>
               </Box>
@@ -402,6 +408,7 @@ export default function Detail() {
             </Grid>
           ))}
         </Grid>
+      <Footer/>
       </Box>
     </div>
   );

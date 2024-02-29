@@ -4,6 +4,7 @@ import theme from "./theme";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Detail from "./pages/Detail";
 import Home from "./pages/Home";
+import { Payment } from "./pages/Payment";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/Detail" element={<Detail/>} />
+      <Route path="/Payment" element={<Payment/>} />
       </Routes>
       </BrowserRouter>
 
