@@ -24,7 +24,6 @@ export default function Sidebar() {
       sx={{
         width: 300,
         padding: 2,
-        zIndex: 2000,
         backgroundColor:"#ffffff",
         marginTop:8
       }}

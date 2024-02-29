@@ -2,14 +2,13 @@ import React from "react";
 import Card from "../components/Card";
 import NavBar from "../components/NavBar";
 import Grid from "@mui/material/Grid";
-import { Box, Typography } from "@mui/material";
+import { Box, Rating, Typography } from "@mui/material";
 import Sidebar from "../components/Sidebar";
 import cars from "../datamobil.json";
 import Profil from "../assets/Profill.png";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ExpandMoreRoundedIcon from "@mui/icons-material/ExpandMoreRounded";
-import StarRateRoundedIcon from "@mui/icons-material/StarRateRounded";
-import View from "../assets/View.png";
+import BG from "../assets/BG.png";
 import ButtonUsage from "../components/ButtonUsage";
 
 export default function Detail() {
@@ -18,98 +17,234 @@ export default function Detail() {
       <NavBar />
       <Sidebar />
       <Box sx={{ marginLeft: "328px" }}>
-        <Grid container sx={{ paddingTop: 10, paddingX: 5 }} columnSpacing={2}>
-          <Grid item xs={12} sm={6}>
-            <img
-              src={View}
-              alt="view"
-              style={{ width: "100%", height: "auto" }}
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <Box
-              sx={{
-                backgroundColor: "#FFFFFF",
-                paddingX: 2,
-                paddingY: 3,
-                borderRadius: "10px",
-                minHeight:"448px"
-              }}
-            >
-              <Grid
-                container
-                justifyContent="space-between"
-                alignItems="center"
-              >
-                <Typography sx={{ fontSize: 32, fontWeight: 700 }}>
-                  Nissan GT-R
+        <Box sx={{ marginX: 3 }}>
+          <Grid
+            container
+            sx={{ paddingTop: 10, paddingX: 5 }}
+            columnSpacing={4}
+          >
+            <Grid item xs={12} sm={6}>
+              <Box sx={{ position: "relative", width: "100%", marginBottom:2 }}>
+                <Typography
+                  color="text.white"
+                  sx={{
+                    width: "372px",
+                    fontSize: 32,
+                    fontWeight: 600,
+                    position: "absolute",
+                    top: 20,
+                    left: 20,
+                  }}
+                >
+                  Sports car with the best design and acceleration
                 </Typography>
-                <FavoriteIcon
-                  style={{ color: "#ED3F3F", marginLeft: "auto" }}
+                <Typography
+                  color="text.white"
+                  sx={{
+                    width: "284px",
+                    fontSize: 16,
+                    fontWeight: 500,
+                    position: "absolute",
+                    top: 130,
+                    left: 20,
+                  }}
+                >
+                  Safety and comfort while driving a futuristic and elegant
+                  sports car
+                </Typography>
+                <img
+                  src={BG}
+                  alt="Gambar"
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    backgroundColor: "#3563E9",
+                    borderRadius: "10px",
+                  }}
                 />
+              </Box>
+              <Grid container spacing={3}>
+              {[...new Array(3)].map((_) => (
+                <Grid item xs={4}>
+                  <img
+                    src={BG}
+                    alt="Gambar"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      backgroundColor: "#3563E9",
+                      borderRadius: "10px",
+                    }}
+                  />
+                </Grid>
+              ))}
               </Grid>
-              <Grid container alignItems="center">
-                <Grid color="#FBAD39">
-                  <StarRateRoundedIcon />
-                  <StarRateRoundedIcon />
-                  <StarRateRoundedIcon />
-                  <StarRateRoundedIcon />
-                  <StarRateRoundedIcon />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <Box
+                sx={{
+                  backgroundColor: "#FFFFFF",
+                  paddingX: 2,
+                  paddingY: 3,
+                  borderRadius: "10px",
+                  minHeight: "448px",
+                }}
+              >
+                <Grid
+                  container
+                  justifyContent="space-between"
+                  alignItems="center"
+                >
+                  <Typography sx={{ fontSize: 32, fontWeight: 700 }}>
+                    Nissan GT-R
+                  </Typography>
+                  <FavoriteIcon
+                    style={{ color: "#ED3F3F", marginLeft: "auto" }}
+                  />
+                </Grid>
+                <Grid container alignItems="center">
+                  <Rating name="read-only" value={4} readOnly />
+
+                  <Typography
+                    color="text.third"
+                    sx={{ fontSize: 14, fontWeight: 500 }}
+                  >
+                    440+ Reviewer
+                  </Typography>
                 </Grid>
                 <Typography
                   color="text.third"
-                  sx={{ fontSize: 14, fontWeight: 500 }}
+                  sx={{
+                    fontSize: 20,
+                    fontWeight: 400,
+                    lineHeight: "40px",
+                    marginY: 2,
+                  }}
                 >
-                  440+ Reviewer
+                  NISMO has become the embodiment of Nissan's outstanding
+                  performance, inspired by the most unforgiving proving ground,
+                  the "race track".
                 </Typography>
-              </Grid>
-              <Typography
-                color="text.third"
-                sx={{
-                  fontSize: 20,
-                  fontWeight: 400,
-                  lineHeight: "40px",
-                  marginY: 2,
-                }}
-              >
-                NISMO has become the embodiment of Nissan's outstanding
-                performance, inspired by the most unforgiving proving ground,
-                the "race track".
-              </Typography>
-              
-              <Grid
-            sx={{ fontSize: 14, marginTop: 1 }}
-            justifyContent="space-between"
-            alignItems="center"
-            container
-          >
-            <Grid item>
-              <Typography
-                sx={{ fontSize: 28, fontWeight: 700 }}
-                color="text.primary"
-                fontWeight="bold"
-                variant="h5"
-                component="div"
-              >
-                $88/
-                <span
-                  style={{ color: "#90A3BF", fontSize: 16, fontWeight: 700 }}
+                <Grid container sx={{marginBottom:8}}>
+                <Grid container justifyContent="space-between" sx={{marginBottom:2}}  >
+                  <Grid item>
+
+                <Typography
+                    color="text.secondary"
+                    sx={{ fontSize: 20, fontWeight: 400 }}
+                  >
+                    Type Car
+                    <span
+                        style={{
+                          color: "#596780",
+                          fontSize: 20,
+                          fontWeight: 600,
+                          marginLeft: "60px",
+                        }}
+                      >
+                        Sport
+                      </span>
+                  </Typography>
+                    </Grid>
+                  <Grid item>
+
+                <Typography
+                    color="text.secondary"
+                    sx={{ fontSize: 20, fontWeight: 400 }}
+                  >
+                    Capacity
+                    <span
+                        style={{
+                          color: "#596780",
+                          fontSize: 20,
+                          fontWeight: 600,
+                          marginLeft: "60px",
+                        }}
+                      >
+                        2 Person
+                      </span>
+                  </Typography>
+                    </Grid>
+                </Grid>
+                <Grid container justifyContent="space-between">
+                  <Grid item>
+
+                <Typography
+                    color="text.secondary"
+                    sx={{ fontSize: 20, fontWeight: 400 }}
+                  >
+                    Steering 
+                    <span
+                        style={{
+                          color: "#596780",
+                          fontSize: 20,
+                          fontWeight: 600,
+                          marginLeft: "60px",
+                        }}
+                      >
+                        Manual
+                      </span>
+                  </Typography>
+                    </Grid>
+                  <Grid item>
+
+                <Typography
+                    color="text.secondary"
+                    sx={{ fontSize: 20, fontWeight: 400 }}
+                  >
+                    Gasoline 
+                    <span
+                        style={{
+                          color: "#596780",
+                          fontSize: 20,
+                          fontWeight: 600,
+                          marginLeft: "60px",
+                        }}
+                      >
+                        70L
+                      </span>
+                  </Typography>
+                    </Grid>
+                </Grid>
+                </Grid>
+                <Grid
+                  sx={{ fontSize: 14, marginTop: 1 }}
+                  justifyContent="space-between"
+                  alignItems="center"
+                  container
                 >
-                  day
-                </span>
-              </Typography>
-            </Grid>
-            <Grid item>
-                <ButtonUsage name="Rent Now" />
+                  <Grid item>
+                    <Typography
+                      sx={{ fontSize: 28, fontWeight: 700 }}
+                      color="text.primary"
+                      fontWeight="bold"
+                      variant="h5"
+                      component="div"
+                    >
+                      $88/
+                      <span
+                        style={{
+                          color: "#90A3BF",
+                          fontSize: 16,
+                          fontWeight: 700,
+                        }}
+                      >
+                        day
+                      </span>
+                    </Typography>
+                  </Grid>
+                  <Grid item>
+                    <ButtonUsage name="Rent Now" />
+                  </Grid>
+                </Grid>
+              </Box>
             </Grid>
           </Grid>
-            </Box>
-          </Grid>
-        </Grid>
+        </Box>
         <Box
           sx={{
             backgroundColor: "#FFFFFF",
-            marginX: 5,
+            marginX: 8,
             padding: 4,
             marginTop: "64px",
             borderRadius: "10px",
@@ -179,12 +314,8 @@ export default function Detail() {
                       CEO at Bukalapak
                     </Typography>
                   </Grid>
-                  <Grid color="#FBAD39" item>
-                    <StarRateRoundedIcon />
-                    <StarRateRoundedIcon />
-                    <StarRateRoundedIcon />
-                    <StarRateRoundedIcon />
-                    <StarRateRoundedIcon />
+                  <Grid item>
+                    <Rating name="read-only" value={4} readOnly />
                   </Grid>
                 </Grid>
                 <Grid item>
@@ -235,7 +366,7 @@ export default function Detail() {
             </Typography>
           </Grid>
         </Grid>
-        <Grid justifyContent="center" container spacing={2} sx={{ marginY: 3 }}>
+        <Grid justifyContent="center" container gap={4} sx={{ marginY: 3 }}>
           {cars.slice(0, 3).map((car) => (
             <Grid item>
               <Card
@@ -256,7 +387,7 @@ export default function Detail() {
         >
           Recomendation Car
         </Typography>
-        <Grid justifyContent="center" container spacing={2} sx={{ marginY: 2 }}>
+        <Grid justifyContent="center" container gap={4} sx={{ marginY: 2 }}>
           {cars.slice(0, 3).map((car) => (
             <Grid item>
               <Card

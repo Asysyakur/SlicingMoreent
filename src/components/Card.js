@@ -79,7 +79,7 @@ const Cards = ({ image, name, category, gas, manual, size, price }) => {
                 variant="h5"
                 component="div"
               >
-                ${price}/
+                ${price}.00/
                 <span
                   style={{ color: "#90A3BF", fontSize: 14, fontWeight: 700 }}
                 >

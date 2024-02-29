@@ -45,7 +45,7 @@ export default function Home() {
                 color="primary">View All</Typography>
         </Grid>
       </Grid>
-      <Grid justifyContent="center" container spacing={2} sx={{ marginY: 3 }}>
+      <Grid justifyContent="center" container gap={4} sx={{ marginY: 3 }}>
         {cars.slice(0, 8).map((car) => (
           <Grid item>
             <Card
@@ -62,7 +62,7 @@ export default function Home() {
       </Grid>
       <Typography sx={{ paddingX:8, marginTop:8 ,fontSize: 16, fontWeight: 600 }}
                 color="text.secondary" >Recomendation Car</Typography>
-      <Grid justifyContent="center" container spacing={2} sx={{ marginY: 2 }}>
+      <Grid justifyContent="center" container gap={4} sx={{ marginY: 2 }}>
         {cars.slice(0, 4).map((car) => (
           <Grid item>
             <Card
